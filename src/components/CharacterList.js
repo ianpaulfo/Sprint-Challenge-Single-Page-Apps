@@ -33,9 +33,9 @@ export default function CharacterList() {
     <section className="character-list">
       {characters.map(character =>
         <CharacterCard
-          id={character.id}
           name={character.name}
           species={character.species}
+          image={character.image}
         />
       )}
     </section>

@@ -9,7 +9,6 @@ const Card = styled.div`
   padding:5px;
   margin: 15px;
   color:whitesmoke;
-  // background:darkslategrey;
   background: black;
   padding:2%;
   width:40%;
@@ -36,7 +35,6 @@ export default function CharacterCard(props) {
         <img src={props.image} />
       </div>
       <CardInfo>
-        <p>ID: {props.id}</p>
         <p>Name: {props.name}</p>
         <p>Species: {props.species}</p>
       </CardInfo>
