@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  max-width: 100%;
 }
 
 main {
@@ -37,3 +38,14 @@ main {
 header h1 {
   text-align: center;
 }
+.nav-bar {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+
+}
+
+.character-list{
+  display:flex;
+  flex-wrap:wrap;
+} 	
