@@ -41,4 +41,9 @@ header h1 {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+}
+
+.character-list{
+  display:flex;
+  flex-wrap:wrap;
 } 
