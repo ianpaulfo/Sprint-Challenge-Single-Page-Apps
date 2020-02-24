@@ -46,4 +46,9 @@ header h1 {
 .character-list{
   display:flex;
   flex-wrap:wrap;
+}
+
+a.active{
+  background:dodgerblue;
+  border-radius:10px;
 } 
