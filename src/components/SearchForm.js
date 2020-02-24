@@ -6,7 +6,7 @@ import "../index.css";
 export default function SearchForm(props) {
   // TODO: Add useState to track data from useEffect
   const [characters, setCharacters] = useState([]);
-  let updatedList = characters;
+  const [completeList, setCompleteList] = useState([]);
   let changes = 0;
 
   useEffect(() => {
@@ -16,6 +16,8 @@ export default function SearchForm(props) {
       // setCharacters(res.data.results);
       console.log(res.data.results);
       setCharacters(res.data.results);
+      setCompleteList(res.data.results);
+
     }).catch(e => console.log(e));
   }, [changes]);
 
@@ -29,8 +31,14 @@ const handleChange = event => {
 
     ))
     changes++;
-    console.log(updatedList);
+    console.log(event.target.value);
 
+    if (event.target.value === ""){
+      console.log("resetting search");
+      console.log(completeList);
+      setCharacters(completeList);
+    }
+    console.log(characters);
 
 };
 
@@ -51,17 +59,19 @@ const handleChange = event => {
           </div>
         </label>
       </form>
-      {updatedList.map(character => 
-          <CharacterCard
-            id={character.id}
-            name={character.name}
-            species={character.species}
-            image={character.image}
-            gender={character.gender}
-            status={character.status}
-          />   
+      <div className="character-list">
+        {characters.map(character => 
+            <CharacterCard
+              id={character.id}
+              name={character.name}
+              species={character.species}
+              image={character.image}
+              gender={character.gender}
+              status={character.status}
+           />   
           )
-      }
+        }
+      </div>
     </section>
   );
 }
