@@ -37,3 +37,8 @@ main {
 header h1 {
   text-align: center;
 }
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+} 
