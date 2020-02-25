@@ -2,7 +2,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  max-width: 100%;
 }
 
 main {
@@ -28,24 +27,13 @@ main {
 .grid-view div.card.ui {
   margin: 1.25rem;
 }
-
+/*
 .main-img {
   display: block;
   border-radius: 100%;
   margin: 0 auto;
-}
+} */
 
 header h1 {
   text-align: center;
 }
-.nav-bar {
-display: flex;
-flex-direction: row;
-justify-content: space-around;
-
-}
-
-.character-list{
-  display:flex;
-  flex-wrap:wrap;
-} 	
